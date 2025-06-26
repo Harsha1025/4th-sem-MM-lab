@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>circle</title>
+        <style>
+            div{
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                background-color: bisque;
+                /* animation-duration:10; */
+                animation: bounce 10s ease-in 0s infinite alternate none;
+            }
+            @keyframes bounce {
+                0%{
+                    transform: translate(0);
+                }                
+                50%{
+                    transform: translate(0,500px);
+
+                }
+                100%{
+                    transform: translate(0);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student registration form </title>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+            div{
+                 
+                border: 1px solid black;
+            }
+            form{
+                display: flex;
+              
+                flex-direction: column;
+                align-items: center;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Student registration form </h1>
+            <form  id="studentForm">
+                <label for="">first Name</label>
+                <input type="text" name="firstName"><br><br>
+                <label for="">Last Name</label>
+                <input type="text" name="lastname"><br><br>
+                <label for="">Email:</label>
+                <input type="email" name="email"><br><br>
+                <label for="">Date of Birth</label>
+                <input type="date" name="dob"><br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <script>
+            function ValidateForm(submitEvent) {  
+          
+            submitEvent.preventDefault();  
+            const  form = document.getElementById('studentForm');
+            const fn =form.elements['firstName'].value
+            const ls =form.elements['lastname'].value
+            const email =form.elements['email'].value
+            const dob =form.elements['dob'].value
+
+
+            if (!fn || !ls || !email || !dob){
+                alert('please fill all the fields before submitting')
+                return;
+            }
+            alert('form submitted successfully')
+            }
+document.getElementById('studentForm').addEventListener('submit', ValidateForm);   
+        </script>
+    </body>
+</html>

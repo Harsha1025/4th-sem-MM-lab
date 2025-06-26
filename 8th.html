@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Box</title>
+        <style>
+            div{
+                width: 200px;
+                height: 200px;
+                background-color: black;
+                color: aliceblue;
+                
+                
+            }
+            .box{
+                transition-property: transform;
+                transition-duration: 5s;
+            }
+            .move{
+                transform: translate(300%,50%);
+
+            }
+           
+        </style>
+    </head>
+    <body>
+        <div class="box">Box</div>
+        <script>
+            setTimeout(() => {
+                document.querySelector('div').classList.add('move')
+            }, 1000);
+        </script>
+    </body>
+</html>
